@@ -3,7 +3,295 @@
 @import 'reset';
 @import 'global';
 
+// HEADER
 
+.header {
+    padding: 60px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: transparent;
 
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 45px;
+    }
+
+    &__user {
+        display: flex;
+        margin-left: 60px;
+    }
+
+    &__user-link,
+    &__link {
+        font-size: 18px;
+        text-decoration: none;
+        color: $default-color;
+        transition: color 0.4s ease;
+    }
+
+    &__user-link:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__user-link {
+        display: inline-block;
+    }
+
+    &__user-link::after {
+        content: '';
+        display: block;
+        width: 19px;
+        height: 19px;
+        top: 0;
+        left: 0;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../images/icons/search-icon.svg');
+    }
+
+    &__user-link:hover,
+    &__link:hover {
+        color: $accent-color;
+    }
+
+    &__user-link--active {
+        position: relative;
+        color: $accent-color;
+    }
+
+    &__user-link--active::after {
+        background-image: url('../images/icons/basket-icon.svg');
+    }
+
+    &__user-num {
+        position: absolute;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+        top: -15%;
+        left: 72%;
+        width: 14px;
+        height: 14px;
+        color: #fff;
+        background-color: $accent-color;
+        border-radius: 50%;
+    }
+
+}
+
+// HERO SECTION
+
+.hero {
+    position: relative;
+    // padding-top: 160px 0;
+
+    &__inner {
+        // height: calc(100vh - 160px);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-image: url(../images/bg.png);
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 66px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        color: #363853;
+        margin-bottom: 20px;
+        max-width: 450px;
+    }
+
+    &title--mod {
+        color: $accent-color;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        max-width: 450px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__link {
+        color: #363853;
+    }
+}
+
+// CATEGORY MENU SECTION
+
+.category {
+    padding-bottom: 120px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }
+
+    &__item {
+        position: relative;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 0px 1px #ECECEC;
+        border-radius: 5px;
+        transition: box-shadow .4s ease;
+    }
+
+    &__button {
+        padding: 25px 30px 25px 85px;
+        line-height: 1.3;
+    }
+
+    &__item::before {
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: 32px;
+        width: 44px;
+        height: 44px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__item--burger::before {
+        background-image: url('../images/icons/burger-icon.svg')
+    }
+
+    &__item--pizza::before {
+        background-image: url('../images/icons/pizza-icon.svg');
+    }
+
+    &__item--sandwich::before {
+        background-image: url('../images/icons/sandwich-icon.svg')
+    }
+
+    &__item--chicken::before {
+        background-image: url('../images/icons/chicken-icon.svg')
+    }
+
+    &__item--dish::before {
+        background-image: url('../images/icons/dish-icon.svg')
+    }
+
+    // BURGERS
+
+    &__burgers {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 300;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    &__burger-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 210px;
+        padding: 170px 0 20px;
+        text-align: center;
+        background: #FFF;
+        box-shadow: 0px 0px 0px 1px #ECECEC;
+        border-radius: 5px;
+        transition: box-shadow 0.4s ease;
+    }
+
+    &__burger-card::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 35px;
+        width: 140px;
+        height: 140px;
+        background-image: url('../images/burgers-images/burger-one.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__burger-card--beef::before {
+        background-image: url('../images/burgers-images/burger-two.png');
+    }
+
+    &__burger-card--king::before {
+        background-image: url('../images/burgers-images/burger-three.png');
+    }
+
+    &__burger-card--black::before {
+        background-image: url('../images/burgers-images/burger-four.png');
+    }
+
+    &__burger-card--chicken::before {
+        background-image: url('../images/burgers-images/burger-five.png');
+    }
+
+    &__burger-card:hover,
+    &__item:hover {
+        box-shadow: 0px 0px 0px 1px #FF6838;
+    }
+
+    &__burger-name {
+        font-size: 15px;
+        line-height: 18px;
+        max-width: 180px;
+        min-height: 35px;
+        margin-bottom: 10px;
+    }
+
+    &__burger-price {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    &__button-buy {
+        background-color: $accent-color;
+        padding: 7px 16px;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+}
 
 @import 'media';

@@ -1,0 +1,33 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $default-color;
+    background-color: #F9FAFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo__image {
+    height: 40px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.btn {
+    padding: 12px 32px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #fff;
+    max-width: 145px;
+    background-color: $accent-color;
+}

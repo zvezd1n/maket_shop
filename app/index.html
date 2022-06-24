@@ -1,15 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
-    
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img class="logo__image" src="images/logo.svg" alt="Логотип">
+                </a>
+
+                <nav class="menu">
+
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Блюда</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <div class="menu__user">
+                        <a class="menu__user-link" href="#"></a>
+                        <a class="menu__user-link menu__user-link--active" href="#">
+                            <span class="menu__user-num">4</span>
+                        </a>
+                    </div>
+
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
+    <main class="main">
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero__inner">
+
+                    <h1 class="hero__title">
+                        Доставка <span class="title--mod">за 15 минут</span>
+                    </h1>
+                    <p class="hero__text">
+                        Самый быстрый сервис доставки еды в вашем городе. 
+                        Не уложимся в срок - доставка за наш счёт
+                    </p>
+                    <ul class="hero__list">
+                        <li class="hero__item">
+                            <button class="btn">Заказать</button>
+                        </li>
+                        <li class="hero__item">
+                            <a class="hero__link" href="#">Подробнее</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <div class="container">
+                <h2 class="title category__title">Популярные категории </h2>
+
+                <ul class="category__menu">
+                    <li class="category__item category__item--burger">
+                        <button class="category__button">Бургеры</button>
+                    </li>
+                    <li class="category__item category__item--pizza">
+                        <button class="category__button">Пицца</button>
+                    </li>
+                    <li class="category__item category__item--sandwich">
+                        <button class="category__button">Сендвичи</button>
+                    </li>
+                    <li class="category__item category__item--chicken">
+                        <button class="category__button">Азиатская кухня</button>
+                    </li>
+                    <li class="category__item category__item--dish">
+                        <button class="category__button">Cеты</button>
+                    </li>
+                </ul>
+
+                <ul class="category__burgers">
+
+                    <li class="category__burger-card">
+                        <p class="category__burger-name">Чизбургер с листьями салата</p>
+                        <span class="category__burger-price">160 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--beef">
+                        <p class="category__burger-name">Бифбургер</p>
+                        <span class="category__burger-price">190 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--king">
+                        <p class="category__burger-name">Королевский чизбургер</p>
+                        <span class="category__burger-price">260 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--black">
+                        <p class="category__burger-name">Черный гамбургер</p>
+                        <span class="category__burger-price">199 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--chicken">
+                        <p class="category__burger-name">Чикен бургер</p>
+                        <span class="category__burger-price">180 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--cheese">
+                        <p class="category__burger-name">Чизбургер с листьями салата</p>
+                        <span class="category__burger-price">160 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--beef">
+                        <p class="category__burger-name">Бифбургер</p>
+                        <span class="category__burger-price">120 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--king">
+                        <p class="category__burger-name">Королевский чизбургер</p>
+                        <span class="category__burger-price">310 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--black">
+                        <p class="category__burger-name">Афроамериканский гамбургер</p>
+                        <span class="category__burger-price">140 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                    <li class="category__burger-card category__burger-card--chicken">
+                        <p class="category__burger-name">Чикен бургер</p>
+                        <span class="category__burger-price">130 грн.</span>
+                        <button class="category__button-buy">В корзину</button>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
 
     <script src="js/main.min.js"></script>
 </body>
+
 </html>
